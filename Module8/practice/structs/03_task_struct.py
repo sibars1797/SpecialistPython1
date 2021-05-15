@@ -4,3 +4,14 @@
 # 1. Количество элементов списка не превышающие 10
 # 2. Сумму всех положительных элементов списка
 # 3. Среднее арифметическое всех четных элементов
+lst = [1, -2, 14, 5, -26, 2, 15, -2]
+#1)
+res_1 = len([el for el in lst if el <= 10])
+print(res_1)
+#2)
+res_2 = sum(el for el in lst if el > 0)
+print(res_2)
+#3)
+res_3 = [el for el in lst if not el % 2]
+res_3 = sum(res_3)/len(res_3)
+print(res_3)
