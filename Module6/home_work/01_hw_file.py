@@ -1,7 +1,10 @@
 # Напишите функцию log() принимающую в качестве аргумента строку и дописывающую это строку в конец файла
 
 def log(text, file="log.txt"):
-    pass
+    import os
+    path = os.path.join('data', file)
+    with open(path, 'a', encoding='UTF-8') as f:
+        print(text, file=f)
 
 
 log("hello world")  # дописывает "hello world" в конец файла log.txt
